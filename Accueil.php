@@ -15,9 +15,6 @@
     
     
     
-    
-    
-    
     <script type="application/ld+json">{
 		"@context": "http://schema.org",
 		"@type": "Organization",
@@ -28,11 +25,11 @@
     <meta property="og:title" content="Accueil">
     <meta property="og:type" content="website">
   </head>
-  <body class="u-body u-xl-mode" data-lang="fr"><header class="u-clearfix u-header u-header" id="sec-8e4f"><div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+  <body class="u-body u-xl-mode" data-lang="fr"><header class="u-clearfix u-header u-header" id="sec-8e4f"><div class="u-clearfix u-sheet u-sheet-1">
         <a href="https://nicepage.com" class="u-image u-logo u-image-1">
           <img src="images/default-logo.png" class="u-logo-image u-logo-image-1">
         </a>
-        <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">
+        <nav class="u-menu u-menu-one-level u-offcanvas u-menu-1">
           <div class="menu-collapse" style="font-size: 1rem; letter-spacing: 0px;">
             <a class="u-button-style u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#">
               <svg class="u-svg-link" viewBox="0 0 24 24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use></svg>
@@ -40,23 +37,17 @@
 </g></svg>
             </a>
           </div>
-          <div class="u-nav-container">
+          <div class="u-custom-menu u-nav-container">
             <ul class="u-nav u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Accueil.html" style="padding: 10px 20px;">Accueil</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="À-propos-de.html" style="padding: 10px 20px;">À propos de</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Contact.html" style="padding: 10px 20px;">Contact</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Page-1.html" style="padding: 10px 20px;">Page 1</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Page-2.html" style="padding: 10px 20px;">Page 2</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="Profile.html" style="padding: 10px 20px;">Profile</a>
 </li></ul>
           </div>
-          <div class="u-nav-container-collapse">
+          <div class="u-custom-menu u-nav-container-collapse">
             <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
               <div class="u-inner-container-layout u-sidenav-overflow">
                 <div class="u-menu-close"></div>
                 <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Accueil.html">Accueil</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="À-propos-de.html">À propos de</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Contact.html">Contact</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Page-1.html">Page 1</a>
-</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Page-2.html">Page 2</a>
+</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="Profile.html">Profile</a>
 </li></ul>
               </div>
             </div>
@@ -64,8 +55,24 @@
           </div>
         </nav>
       </div></header> 
+    
     <section class="u-clearfix u-grey-10 u-section-1" id="sec-8aaa">
       <div class="u-clearfix u-sheet u-sheet-1">
+      <div class="u-form u-form-1">
+      <form action="nouveaupub.php" method="post" enctype="multipart/form-data">    
+      <div class="u-form-group u-form-message u-label-none">
+              <label for="message-3b9a" class="u-label">Message</label>
+              <textarea placeholder="Enter your message" rows="4" cols="50" id="message-3b9a" name="message" class="u-border-2 u-border-black u-border-no-left u-border-no-right u-border-no-top u-input u-input-rectangle u-input-1" required="" ></textarea>
+            </div>
+            
+            <div class="u-align-right u-form-group u-form-submit">
+              <button name="pub">
+              publier
+            </button>
+            </div>
+            
+          </form>
+        </div>
         <div class="u-list u-list-1">
           <div class="u-repeater u-repeater-1">
             
@@ -93,3 +100,5 @@
     </section>
   
 </body></html>
+
+

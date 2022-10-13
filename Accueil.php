@@ -85,10 +85,10 @@
     
     
     <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-200d"><div class="u-clearfix u-sheet u-sheet-1">
-        <p class="u-small-text u-text u-text-variant u-text-1">Exemple de texte. Cliquez pour sélectionner l'élément de texte.</p>
+        <p class="u-small-text u-text u-text-variant u-text-1">welfare. Cliquez pour sélectionner l'élément de texte.</p>
       </div></footer>
     <section class="u-backlink u-clearfix u-grey-80">
-      <a class="u-link" href="https://nicepage.com/website-templates" target="_blank">
+      <a class="u-link" href="workshop" target="_blank">
         <span>Website Templates</span>
       </a>
       <p class="u-text">

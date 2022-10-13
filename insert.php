@@ -1,5 +1,7 @@
 <?php
+session_start();
 include "connexion.php";
+$id_p=$_SESSION['id_p'];
 
 if(isset($_GET['envoie'])){
 
@@ -7,7 +9,7 @@ if(isset($_GET['envoie'])){
     
     $pub = $_GET['com'];
 
-    $pubs = "INSERT INTO commentaire(id_user,id_publication,text_commentaire,dat) VALUES (3,1,'$pub', Now() )";
+    $pubs = "INSERT INTO commentaire(id_user,id_publication,text_commentaire,dat) VALUES (3,$id_p,'$pub', Now() )";
     
     $run_pub = mysqli_query($con,$pubs);
     
@@ -15,7 +17,7 @@ if(isset($_GET['envoie'])){
         
         echo "<script></script>";
         
-        echo "<script>window.open('Contact.php?id_p=1','_self')</script>";
+        echo "<script>window.open('Contact.php?id_p=$id_p','_self')</script>";
         
     }
     

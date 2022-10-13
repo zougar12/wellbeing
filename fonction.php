@@ -8,6 +8,7 @@ function getPub(){
     global $con;
 
     $i = 1;
+
     
     $get_publications = "select * from publications order by 1 DESC LIMIT 0,8";
     
@@ -32,10 +33,21 @@ function getPub(){
                 <img class='u-image u-image-default u-preserve-proportions u-image-1' src='images/37429.png' alt='' data-image-width='512' data-image-height='512'>
                 <p class='u-custom-item u-small-text u-text u-text-default u-text-variant u-text-3'>$datee</p>
                 <img class='u-image u-image-contain u-image-default u-image-2' src='images/like-png-picto-pouce-en-l-air-115636417050dyzg2q0l3-removebg-preview.png' alt='' data-image-width='494' data-image-height='505'>
+                
                 <img class='u-image u-image-contain u-image-default u-preserve-proportions u-image-3' src='images/25663.png' alt='' data-image-width='512' data-image-height='512'>
-                <p class='u-custom-item u-text u-text-default u-text-4'>Employeur</p>
-                <p class='u-custom-item u-text u-text-default u-text-5'>Je suis d'accord avec vous nous allons faire notre possible afin de pouvoir corriger au plus vite ce problème</p>
-                <a href ='contact.php'><div class='u-border-2 u-border-grey-dark-1 u-container-style u-custom-item u-group u-radius-10 u-shape-round u-white u-group-1'>
+                <h7><p class='u-custom-item u-text u-text-default u-text-4'>Dernier commentaire</p></h7>";
+                $get_commentaires = "select * from commentaire where id_publication = $id_p LIMIT 0,1";
+
+                $run_commentaires = mysqli_query($con,$get_commentaires);
+          
+              while($row_commentaires=mysqli_fetch_array($run_commentaires)){
+                  
+                  $commentaires = $row_commentaires['text_commentaire'];
+                  echo"
+                <p class='u-custom-item u-text u-text-default u-text-5'>$commentaires</p>";
+              }
+              echo"
+                <a href ='contact.php?id_p=$id_p'><div class='u-border-2 u-border-grey-dark-1 u-container-style u-custom-item u-group u-radius-10 u-shape-round u-white u-group-1'>
                   <div class='u-container-layout u-container-layout-2'>
                     <p class='u-custom-item u-text u-text-default u-text-6'>Donnez votre avis a ce sujet</p>
                   </div>
@@ -61,7 +73,7 @@ function getfullpub(){
     
     $id_p = $_GET['id_p'];
 
-
+    $_SESSION['id_p']=$id_p;
   $get_publication = "select * from publications where id_publication = $id_p";
     
     $run_publication = mysqli_query($con,$get_publication);
@@ -112,6 +124,8 @@ function getfullpub(){
         </form>
       </div>
     </div>";
+
+   
 
     
 
